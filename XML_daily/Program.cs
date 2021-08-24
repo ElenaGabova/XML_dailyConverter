@@ -25,7 +25,6 @@ namespace ReadXMLfromURL
             XDocument xdoc = XDocument.Load("http://www.cbr.ru/scripts/XML_daily.asp");
 
             //добавление курсов валют в словарь
-
             var t = xdoc.Descendants("Valute")
                     .Where(v => v.Element("CharCode").Value == "HUF" || 
                                 v.Element("CharCode").Value == "NOK");
